@@ -1,5 +1,16 @@
-const vue = new Vue({
-  el: '#vue',
+Vue.component('catalog-item', {
+  props: ['item'],
+  template: `
+    <div class="item">
+      <img :src="item.img" alt="Item Image">
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+    </div>
+  `
+});
+
+new Vue({
+  el: '#products',
   data: {
     items: [
       {
@@ -53,7 +64,7 @@ const vue = new Vue({
         description: 'The tallest hamburger from Peru'
       },
       {
-        img: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Round_Table_chicken_%26_garlic_pizza.jpg',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Round_Table_chicken_%26_garlic_pizza.JPG',
         title: 'Chicken Garlic Pizza',
         description: 'Our speciality pizza'
       },

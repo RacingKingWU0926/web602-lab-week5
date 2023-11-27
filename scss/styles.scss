@@ -1,20 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
 
-//Colors:
-/*---------
-rgb(255,255,255)
-rgb(0,0,0)
-rgba(0,0,0,0.5)
-rgba(0,0,0,0.24)
-rgb(22, 34, 42)
-rgb(58, 96, 115)
-
-
-//Fonts:
-Bitter
-FontAwesome
-
-----------*/
+$color1:rgb(255, 255, 255);
+$color2:rgb(0, 0, 0);
+$color3:rgba(0, 0, 0, 0.5);
+$color4:rgba(0, 0, 0, 0.24);
+$color5:rgb(22, 34, 42);
+$color6:rgb(58, 96, 115);
 
 * {
   margin: 0;
@@ -24,3 +15,46 @@ FontAwesome
 }
 
 $max-width: 80em;
+
+body {
+  background-color: $color1;
+  font-family: Calibri, sans-serif;
+}
+
+.header {
+  background-color: $color6;
+  height: 200px;
+  text-align: center;
+  padding-top: 90px;
+  color: $color1;
+}
+
+.main-wrapper {
+  width: 1400px;
+  margin: 35px auto;
+}
+
+#products {
+  padding: 1em;
+  margin: auto auto;
+
+  .item {
+    width: 320px;
+    background-color: $color1;
+    display: inline-block;
+    margin: 10px 10px;
+    position: relative;
+    text-align: center;
+
+    img {
+      width: 280px;
+      height: 190px;
+    }
+
+    h2 {
+      margin-left: 20px;
+      font-size: 18px;
+    }
+
+  }
+}
